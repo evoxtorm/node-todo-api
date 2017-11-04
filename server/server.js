@@ -8,7 +8,9 @@ mongoose.connect('mongodb://localhost:27017/TodoApp');
 
 let Todo = mongoose.model('Todo', {
 	text: {
-		type: String
+		type: String,
+		required: true,
+		minlength: 1
 	},
 	completed: {
 		type: Boolean
@@ -30,11 +32,7 @@ let Todo = mongoose.model('Todo', {
 // 	console.log('Unable to save todo');
 // });
 
-let otherTodo = new Todo({
-	text: 'Feed the dinner',
-	completed: true,
-	completedAt:132
-});
+let otherTodo = new Todo({});
 
 otherTodo.save().then((doc) => {
 	console.log(JSON.stringify(doc, undefined,2));
