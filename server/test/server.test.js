@@ -5,6 +5,12 @@ const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
 
 
+const todos = [{
+	text: 'First test todo'
+}, {
+	text: 'Second test todo'
+}];
+
 beforeEach((done) => {
 	Todo.remove({}).then(() => done());
 });
