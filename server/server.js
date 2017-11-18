@@ -33,7 +33,8 @@ app.get('/todos', (req, res) => {
 
 
 app.get('/todos/:id', (req,res) => {
-	res.send(req.params);
+	var id = req.params.id;
+	
 });
 
 app.listen(3000, () => {
