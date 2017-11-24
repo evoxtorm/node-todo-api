@@ -116,5 +116,13 @@ describe('DELETE /todos/:id', () => {
 
 	});
 
-	it('should return 404')
-})
+	it('should return 404 if todo is not found', (done) => {
+
+	});
+
+
+	it('should return 404 if object id is invalid', (done) => {
+
+	});
+
+});
