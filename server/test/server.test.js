@@ -153,3 +153,12 @@ describe('DELETE /todos/:id', () => {
 	});
 
 });
+
+
+describe('PATCH /todos/:id', () => {
+	it('should update the todo', (done) => {
+
+	});
+
+	it('should ')
+})
